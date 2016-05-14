@@ -15,9 +15,10 @@
 	        {{> loginButtons}}
 	      </ul> 
 	      <ul class="nav navbar-nav navbar-right">
-	        <li>
+	        {{#if currentUser}}<li>
 	        	<a href="{{pathFor 'postSubmit'}}">Post your listing</a>
 	        </li>
+	        {{/if}}
 	      </ul> 
 	    </div>
 	  </div>
