@@ -13,11 +13,11 @@ Template.postSubmit.events({
 		Meteor.call('postInsert', post, function(error, result) {
 			// show error message and exit
 			if (error)
-				return alert(error.reason);
+				return throwError(error.reason);
 
 			// show the existing post and display warning
 			if (result.postExists)
-				alert('This home has already been listed');
+				throwError('This home has already been listed');
 
 			Router.go('postPage', {_id: result._id});
 		});
