@@ -30,3 +30,4 @@ Template.postEdit.events({
 		}
 	}
 });
+
